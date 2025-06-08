@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #f33030, #000000);
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.mensagem {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 1em;
+  background-color: #131313;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+#surpresa {
+  margin-top: 30px;
+  font-size: 1.4em;
+  color: #fff8dc;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Galeria */
+.galeria {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.galeria h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.fotos img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border: 4px solid white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.fotos img:hover {
+  transform: scale(1.05);
+}
+
+/* Corações animados */
+.coracoes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.coracao {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: subir 5s linear infinite;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
